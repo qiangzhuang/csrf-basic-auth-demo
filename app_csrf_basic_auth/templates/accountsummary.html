@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+
+<p>here's your money {{ name }}</p>
+<table border="1">
+<tr>
+<td>Total</td>
+<td>{{amount}}</td>
+</tr>
+</table>
+
+<form method="POST" action="/transfer">
+	Transfer to<input type="text" name="username"></br>
+	Amount<input type="text" name="amount"></br>
+	<input type="submit" name="Submit" value="Submit"/></br>
+</form>
+
+{% endblock %}
